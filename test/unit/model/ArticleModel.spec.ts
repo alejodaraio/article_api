@@ -1,9 +1,9 @@
 import {expect} from "chai";
-import ArticleModel from '../../../app/model/ArticleModel';
+import ArticleModel from '../../../app/model/Article';
 
-describe('ArticleModel Test', () =>{
+describe('Article Test', () =>{
 
-    it('Should return an instanceof ArticleModel',() =>{
+    it('Should return an instanceof Article',() =>{
         let article = new ArticleModel(1, 'Title', 876543345, 'content body');
         expect(article).to.be.an.instanceof(ArticleModel);
     });
