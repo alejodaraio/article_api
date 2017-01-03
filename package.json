@@ -1,5 +1,5 @@
 {
-  "name": "core_api",
+  "name": "article_api",
   "version": "0.0.0",
   "description": "a seed project for creating http service using restify written in typescript",
   "main": "app.js",
