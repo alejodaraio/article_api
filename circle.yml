@@ -1,0 +1,12 @@
+dependencies:
+  override:
+    - npm install
+    - npm install -g istanbul
+
+test:
+  override:
+  - npm run compile
+  - npm run test
+
+  post:
+  - cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js
