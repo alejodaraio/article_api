@@ -20,7 +20,7 @@ describe('Article route controller', () => {
 
     it('should return object', (done) => {
         supertest(server)
-            .get('/article')
+            .get('/article/1')
             .end((err: any, response: supertest.Response) => {
                 if (err) {
                     done(err);

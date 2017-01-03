@@ -10,7 +10,10 @@ export default class ArticleController implements IRouter {
 
     public get(req: restify.Request, res: restify.Response, next: restify.Next) {
         try {
-            let article = new Article(1, 'Dummy Title', 1482172265, 'dummy body');
+
+            let id: number = req.params.id;
+            let article = new Article(id, 'Dummy Title', 1482172265, 'dummy body');
+
             res.json(200, article);
         } catch (e) {
             res.json(400, e);
