@@ -4,6 +4,10 @@ import {IRouter} from "../../interfaces/IRouter";
 
 export default class ArticleController implements IRouter {
 
+    public constructor() {
+
+    }
+
     public get(req: restify.Request, res: restify.Response, next: restify.Next) {
         try {
             let article = new Article(1, 'Dummy Title', 1482172265, 'dummy body');
