@@ -1,10 +1,8 @@
 import * as restify from "restify";
-import ArticleModel from "../model/ArticleModel";
-import {IRouter} from "../interfaces/IRouter";
+import ArticleModel from "../../model/ArticleModel";
+import {IRouter} from "../../interfaces/IRouter";
 
 export default class ArticleController implements IRouter {
-
-    readonly version: string;
 
     public get(req: restify.Request, res: restify.Response, next: restify.Next) {
         try {
@@ -13,5 +11,17 @@ export default class ArticleController implements IRouter {
         } catch (e) {
             res.json(400, e);
         }
+    }
+
+    public post(req: restify.Request, res: restify.Response, next: restify.Next) {
+
+    }
+
+    public put(req: restify.Request, res: restify.Response, next: restify.Next) {
+
+    }
+
+    public del(req: restify.Request, res: restify.Response, next: restify.Next) {
+
     }
 }

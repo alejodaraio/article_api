@@ -32,19 +32,4 @@ describe('Article route controller', () => {
                 }
             });
     });
-
-    it('should return the version v1', (done) => {
-        supertest(server)
-            .get('/v1/article')
-            .end((err: any, response: supertest.Response) => {
-                if (err) {
-                    done(err);
-                }
-                else {
-                    expect(response.status).to.equal(200);
-                    expect(response.body).to.be.an('object');
-                    done();
-                }
-            });
-    });
 });

@@ -1,11 +1,15 @@
 import * as restify from 'restify';
-import ArticleControllerV1 from '../versions/v1/controllers/ArticleController'
+import ArticleController from '../controllers/article/ArticleController'
 
 function articleRoute(api:restify.Server): void {
 
-  let article = new ArticleControllerV1();
+  let article = new ArticleController();
 
-  api.get({path:'/article', version: '1.0.0'}, article.get);
+  api.get({path:'/article'}, article.get);
+  api.post({path:'/article'}, article.post);
+  api.put({path:'/article'}, article.put);
+  api.del({path:'/article'}, article.del);
+
 }
 
 module.exports.routes = articleRoute;

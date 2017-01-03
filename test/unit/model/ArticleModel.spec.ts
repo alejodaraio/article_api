@@ -1,5 +1,5 @@
 import {expect} from "chai";
-import ArticleModel from '../../../app/versions/v1/model/ArticleModel';
+import ArticleModel from '../../../app/model/ArticleModel';
 
 describe('ArticleModel Test', () =>{
 
