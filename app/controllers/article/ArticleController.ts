@@ -1,5 +1,5 @@
 import * as restify from "restify";
-import Article from "../../model/Article";
+import Article from "../../models/Article";
 import {IRouter} from "../../interfaces/IRouter";
 
 export default class ArticleController implements IRouter {
