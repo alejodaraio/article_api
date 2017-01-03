@@ -1,7 +1,7 @@
 {
   "name": "article_api",
   "version": "0.0.0",
-  "description": "a seed project for creating http service using restify written in typescript",
+  "description": "article api",
   "main": "app.js",
   "scripts": {
     "lint": "tslint --config ./tslint.json --format verbose --project './tsconfig.json' --type-check",
