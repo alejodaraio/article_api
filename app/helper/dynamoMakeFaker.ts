@@ -33,7 +33,7 @@ for (let i: number = 0; i < 100; i++) {
         Item: {
             "id": faker.random.number(999999999),
             "title": faker.name.title(),
-            "date": faker.date.recent(),
+            "published_date": Date.now(),
             "body": faker.lorem.paragraph()
         }
     };
