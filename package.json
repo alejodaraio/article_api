@@ -8,7 +8,9 @@
     "test": "./node_modules/.bin/ts-mocha $NODE_DEBUG_OPTION ./test/**/**/*.spec.ts",
     "coverage": "npm run compile && istanbul cover node_modules/.bin/_mocha build/test/unit/**/*.spec.js -- -R spec --report lcov",
     "compile": "node_modules/.bin/tsc",
-    "start": "node build/app/app.js"
+    "start": "node build/app/app.js",
+    "makeFaker": "npm run compile && npm run deleteFaker && node build/app/helper/dynamoMakeFaker.js",
+    "deleteFaker": "npm run compile && node build/app/helper/dynamoDeleteFaker.js"
   },
   "keywords": [
     "typescript",
@@ -17,6 +19,7 @@
   "author": "Alejo Daraio",
   "license": "MIT",
   "dependencies": {
+    "@types/aws-sdk": "0.0.42",
     "@types/bunyan": "0.0.34",
     "@types/chai": "^3.4.34",
     "@types/mocha": "^2.2.32",
@@ -25,14 +28,17 @@
     "@types/semver": "^5.3.30",
     "@types/sinon": "^1.16.31",
     "@types/supertest": "^1.1.31",
+    "aws-sdk": "^2.7.21",
     "restify": "^4.3.0",
     "semver": "^5.3.0"
   },
   "devDependencies": {
     "@types/chai": "^3.4.34",
+    "@types/faker": "^3.1.32",
     "bunyan": "^1.8.5",
     "chai": "^3.5.0",
     "coveralls": "^2.11.15",
+    "faker": "^3.1.0",
     "mocha": "^3.1.2",
     "mocha-lcov-reporter": "^1.2.0",
     "sinon": "^1.17.6",
